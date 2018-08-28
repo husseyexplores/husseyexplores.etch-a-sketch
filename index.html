@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Etch-a-sketch</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="toastr.min.css">
+</head>
+
+<body>
+  <div class="controls">
+    <div class="input-wrapper">
+      <p>Create a new grid of <input class="input-field input-field--js" type="text" value="20" pattern="^[1-9][0-9]?$|^100$"><span
+          class="duplicate-value noselect">x <span class="duplicate-value--js" style="opacity: 0">20</span></span>
+        <button class="create-grid-btn btn--js">Create</button></p>
+    </div>
+  </div>
+  <div class="grid-wrapper">
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="toast.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

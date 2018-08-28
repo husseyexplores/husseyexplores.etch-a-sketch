@@ -1,0 +1,127 @@
+:root {
+  --color-dark-grey: #212121;
+  --color-light-grey: #525252;
+  --color-bright: #fff;
+  --color-grid-border: #e7e7e7;
+}
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-dark-grey);
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.box {
+  background-color: var(--color-bright);
+  border-bottom: 1px solid var(--color-grid-border);
+  border-right: 1px solid var(--color-grid-border);
+}
+
+/* .box:nth-child(even) {
+  background-color: #ccc;
+  color: #000;
+} */
+.grid-wrapper {
+  width: 700px;
+  height: 700px;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--color-bright);
+}
+
+.controls {
+  margin-bottom: 30px;
+}
+
+.input-wrapper {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+.input-field:invalid {
+  border: none;
+  background: red;
+}
+
+.duplicate-value,
+.input-field {
+  padding: 5px;
+  width: 50px;
+  text-align: center;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background: #12B600;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  display: inline-block;
+}
+
+.duplicate-value {
+  font-size: inherit;
+  margin-left: -2px;
+  padding-left: 0;
+  text-align: left;
+  padding-right: 0;
+  width: 60px;
+}
+
+.create-grid-btn {
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  background: black;
+  color: #fff;
+  border: 1px solid #fff;
+  transform: translateY(0);
+  transition: .2s transform ease, .3s background;
+}
+
+.create-grid-btn:hover {
+  background: var(--color-light-grey);
+}
+
+.create-grid-btn:active {
+  transform: translateY(2px);
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
